@@ -39,7 +39,7 @@ Dazu habe ich ein Data-Model `HouseholdInsurance` erstellt, welches von `Insuran
 
 Da aber jede Versicherung für die Preiskalkulation andere Attribute benutzen könnte (selbst Hausratsversicherungen könnten andere Attribute benutzen), habe ich noch die Container Daten Klasse `InsuranceCalculationStrategyParameters` erstellt. 
 
-Damit sollte es möglich sein, für jede Versicherung komplett eigene Parameter zu bestimmen, die zur Preiskalkulation genutzt werden und man kann trotzdem nur das eine Interface, nämlich `InsurancePriceCalculationStrategy`, implementieren.
+Damit sollte es möglich sein, für jede Versicherung komplett eigene Parameter zu bestimmen, die zur Preiskalkulation genutzt werden und man muss trotzdem nur das eine Interface, nämlich `InsurancePriceCalculationStrategy`, implementieren.
 Sollte der Fall eintreten, dass eine Hausratversicherung ein zusätzliches Attribut zur Berechnung benötigt, müsste man es in der Container-Klasse hinzufügen (`HouseholdInsuranceCalculationStrategyParameters`) und dann eine neue Berechnungsstrategie erstellen, die von `InsurancePriceCalculationStrategy` erbt und die Strategie dann in der Factory registrieren.
 
 Um die passende Preisberechnungsstrategie auszuwählen, gibt es zusätzlich noch das `StrategyFactory` interface.
