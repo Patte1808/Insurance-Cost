@@ -35,9 +35,7 @@ Ich habe die Annahme getroffen, dass jede Versicherungsart (also Hausratversiche
 
 Zunächst einmal lag der Fokus für mich darauf es möglichst einfach zu machen neue Produkte der selben Art (in dem konkreten Fall Haushaltversicherung) zu erstellen.
 
-Dazu habe ich ein Data-Model `HouseholdInsurance` erstellt, welches von `Insurance` erbt. `HouseholdModel` enthält konkrete Informationen darüber, was es genau ausmacht eine "Hausratsversicherung" zu sein. In der Aufgabenstellung scheint dies der Preis pro Quadratmeter zu sein, weshalb `HouseholdInsurance` dieses zusätzliche Attribut hat.
-
-Während der Implementierung ist mir aufgefallen, dass man mit Hilfe von Generics relativ einfach - so hoffe ich zu mindestens - auch komplett neue Produktarten, also zum Beispiel KFZ-Versicherung, implementieren könnte.
+Dazu habe ich ein Data-Model `HouseholdInsurance` erstellt, welches von `Insurance` erbt. `HouseholdInsurance` enthält konkrete Informationen darüber, was es genau ausmacht eine "Hausratsversicherung" zu sein. In der Aufgabenstellung scheint dies der Preis pro Quadratmeter zu sein, weshalb `HouseholdInsurance` dieses zusätzliche Attribut hat.
 
 Da aber jede Versicherung für die Preiskalkulation andere Attribute benutzen könnte (selbst Hausratsversicherungen könnten andere Attribute benutzen), habe ich noch die Container Daten Klasse `InsuranceCalculationStrategyParameters` erstellt. 
 
